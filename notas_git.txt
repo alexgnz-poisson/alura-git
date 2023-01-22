@@ -1,0 +1,161 @@
+Sistemas de control de version a parte de Git
+-CVS
+-SVN
+-Mercurial
+-GIT 
+
+Ahora que entendemos para qué sirve un VCS (Sistema de Control de 
+Versiones), podemos continuar con esta capacitación, pero solo 
+para asegurarnos...
+
+¿Cuáles de las siguientes afirmaciones sobre Git son correctas?
+
+Nos deja organizar el trabajo en equipo, manteniendo los cambios en 
+los archivos en un servidor especifico para especifico.
+Git nos permite almacenar los cambios realizados en cada archivo en un
+servidor propio para eso, toda la gestion de cambios la realiza Git
+y solo debemos preocuparnos por crear un codigo que funcione y no 
+por quien lo cambio antes.
+
+Permite el almacenamiento y acceso a una historia de cambios.
+Cada cambio se registra en un historial y se puede ver y restaurar
+en cualquier momento.
+
+
+Comandos Basicos 
+
+--cd ayuda a buscar entre carpetas
+
+--ls, enlista los archivos que tenemos en las carpetas
+
+--dir abre nuestro directorio 
+
+--git init esto iniciara un repositorio en git, todas las modificaciones
+dentro de esta carpeta git podra mostrar cambios, cuando, y quien
+
+--git status comando que sirve para saber los cambios realizados y saber
+el estado en elq ue estan los archivos dentro del repositorio
+
+--git add agrega el archivo para que lo registre. 
+
+
+¿Cómo hacemos que Git vea una carpeta en particular como un repositorio
+ y observe los cambios en sus archivos?
+
+git init inicializa un repositorio en el directorio donde se 
+ejecuta el comando. Desde este comando, Git podrá administrar 
+los cambios realizados en los archivos.
+
+--git add . agrega todos los archivos de las carpetas que tenemos 
+
+--git rm --cached <file>..." esto sirve para que deje de monitorear
+los cambios 
+
+---git commit -m sirve para guardar los cambios realizados en el archivo
+con un mensaje como buena practica de programacion. 
+
+Al ejecutar el comando git status, recibimos información que puede
+no ser tan clara, especialmente cuando nos encontramos con términos
+como HEAD, working tree, index, etc.
+
+Solo para aclarar un poco, ya que entenderemos mejor cómo funciona
+Git durante el curso, aquí hay algunas definiciones interesantes:
+
+HEAD: Estado actual de nuestro código, es decir, donde nos 
+colocó Git
+
+Working tree: Lugar donde los archivos realmente están siendo 
+almacenados
+
+index: Lugar donde Git almacena lo que será commiteado, es decir, 
+la ubicación entre el working tree y el repositorio de Git en sí.
+
+
+ ---git log , este comando muestra el hash del commit, que es una id para 
+ ese comit, branch (head->master) nos indica donde estaamos parados en
+ el proyecto .
+ Luego muestra el auto, email, fecha y mensaje 
+
+ --Comando --git log --oneline con esto vemos un resumen del hash,en cual
+ branch fue colocado y el mensaje del commit 
+
+ Ahora si quisieramos ver las modificaciones de los archivos lo podemos
+ ver usando
+ git log -p
+
+-- git log --pretty="format:%H" nos muestra los hash de cada uno de los 
+ commits 
+
+ --git log --pretty="format:%h %s" este agrega el hash y el mensaje del
+ commit 
+
+ --git log --pretty="format:%h %s %ae" este agrega el mensaje del commit
+ y el correo, importante saber esto 
+
+
+¿Cómo podemos definir el nombre de la persona que ejecuta commits
+en elrepositorio local actual?
+
+--git config --local user.name "Nombre de la persona"
+
+Ignorando archivos 
+
+--git ignore sirve para ignorar archivos por lo tanto re pone en un
+documento a parte y se pone .gitignore y ahi se pone lo que queremos
+ignorar /carpeta 
+        a.config
+
+Generando commit. cuando usarlo en reglas generales
+NUNCA HAY QUE HACER UN COMMIT EN UN CODIGO QUE NO FUNCIONA 
+
+Deberíamos generar un commit siempre que nuestra base de código
+esté en un estado que nos gustaría recordar.
+
+REPOSITORIOS REMOTOS. 
+
+ Para crear carpetas se usa el mkdir y el nombre que le querramos 
+ poner a nuestra carpeta 
+
+ --git init --bare Esto indica que este repositorio es puro. Solo contiene
+ las modificaciones de los archivos 
+
+Servidor remoto 
+Para agregar un servidor remoto a nuestro servidor local 
+-- git remote add servidorlocal C:\Users\alexa\Escritorio\Oracle_Curso\GitHub\servidor
+
+Por si alguno se equivo en la ruta se hace lo siguientes
+--git remote -v  esto mostrara la ruta despues unos parentesis
+(fetch) : significa el lugar donde nostros vamos a obtener la informacion
+del servidor remoto 
+(push) lugar al que nostros vamos a enviar informacion 
+
+
+Obtener datos del repositorio esta accion se llama clonar.
+parra eso creamos otra carpeta con el nomcre de Alex de ejemplo 
+
+--$ git clone /c/Users/alexa/Escritorio/Oracle_Curso/GitHub/servidor/ proyecto
+
+sOLO SE HIZO UNA CONECCION AL ARCHIVO AHORITA VEREMOS COMO ENVIAR 
+DATOS EN NUESTRO SERVIDOR REMOTO 
+
+
+¿Cómo hicimos para definir un repositorio Git en este caso?
+--git init --bare
+Con este comando creamos un repositorio que no tendrá la working
+tree, o sea, no contendrá una copia de nuestros archivos. Como
+el repositorio servirá solo como servidor, para que otros miembros 
+del equipo sincronicen sus trabajos, disminuimos espacio de 
+almacenamiento de esta forma.
+
+¿Cómo agregamos este enlace entre los repositorios?
+
+git remote add nombre-repositorio camino/del/repositorio
+
+ De esta forma tendremos un link de nuestro repositorio local 
+ con el repositorio remoto, que llamamos de nombre-repositorio, 
+ que está almacenado en camino/del/repositorio.
+
+
+Ayuda a poder empujar los datos de nuestro servidor al repositorio
+clonado que hicimos arriba
+ --git push servidorlocal master 
