@@ -248,3 +248,5 @@ Para crear una nueva branch usamos lo siguiente
 con esto se crea una branch llamada titulo , despues para estar en
 la nueva branch que hicimos hacemos el siguiente comando 
 --git checkout titulo, esto nos mandara la nueva branch llamada titulo
+
+NOTA LAS NOTAS BUENAS ESTAN EN TITULO AL PARECER EN EL BRACH 
