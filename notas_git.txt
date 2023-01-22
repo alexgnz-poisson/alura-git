@@ -159,3 +159,41 @@ git remote add nombre-repositorio camino/del/repositorio
 Ayuda a poder empujar los datos de nuestro servidor al repositorio
 clonado que hicimos arriba
  --git push servidorlocal master 
+
+ Además de agregar repositorios remotos para sincronizar los datos, 
+ vimos que git clone trae un repositorio remoto a nuestra computadora, 
+ creando un repositorio local.
+
+Al modificar el código en nuestro repositorio local, ¿cómo enviamos 
+las modificaciones a el repositorio remoto?
+
+----------git push [repositorio] master
+
+ De esta forma enviamos las modificaciones de nuestra Branch master 
+ (hablaremos más sobre branches dentro de poco) hacia el repositorio
+remoto. Basta con substituir [repositorio] por el nombre que dimos 
+al repositorio al agregarlo. Ahora, para traer los datos que están 
+en el repositorio remoto, podemos utilizar git pull [repositorio] 
+master.
+
+------------------GITHUB-----------------------
+cOMO SUBIR UN REPOSITORIO A GITHUB 
+crear un repositorio en GitHub
+luego en nuestra terminal hacer un git initt, y todos los pasos 
+anteriores que hemos hecho, y agregaremos esto a la terminal
+
+--git remote add origin https://github.com/usuariogit/nombre_repositorio-git.git
+luego 
+-- git push origin master 
+
+
+--------Branches--------
+son las ramas de nuestro git
+para verlas usamos 
+--git branch    nos saldra master por que es la unica creada en el momento
+luego para crear una nueva 
+git brach titulo,       Donde titulo es es nombre que le asignamos a la 
+nueva branch
+para entrar a la nueva branch es
+--git checkout titutlo y eso nos metera a la nueva branh llamada titulo 
+
