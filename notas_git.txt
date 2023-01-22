@@ -51,7 +51,7 @@ los cambios realizados en los archivos.
 --git rm --cached <file>..." esto sirve para que deje de monitorear
 los cambios 
 
----git commit -m sirve para guardar los cambios realizados en el archivo
+---git commit -m " " sirve para guardar los cambios realizados en el archivo
 con un mensaje como buena practica de programacion. 
 
 Al ejecutar el comando git status, recibimos información que puede
@@ -158,44 +158,68 @@ git remote add nombre-repositorio camino/del/repositorio
 
 Ayuda a poder empujar los datos de nuestro servidor al repositorio
 clonado que hicimos arriba
- --git push servidorlocal master 
+ --git push servidorlocal master
 
- Además de agregar repositorios remotos para sincronizar los datos, 
- vimos que git clone trae un repositorio remoto a nuestra computadora, 
- creando un repositorio local.
+ de ahi meterse a la carpeta que creamos de un supuesto usuario 
+ el nombre es Eva 
 
-Al modificar el código en nuestro repositorio local, ¿cómo enviamos 
-las modificaciones a el repositorio remoto?
+cd Eva/proyecto/ 
+ls
+Usamos el siguiente Comando
+--git remote al dar enter nos sale 
+origin
+vamos a utilizar el comando --git remote rename origin local
+para renombrar lo unico que cambia
+el origin por un local ahora de local a servido local 
+-- git remote rename local servidorlocal
 
-----------git push [repositorio] master
+-------------------REPASAR BIEN COMO HACER ESO DE LOS CLONES
 
- De esta forma enviamos las modificaciones de nuestra Branch master 
- (hablaremos más sobre branches dentro de poco) hacia el repositorio
+Ahora en la carpeta que creamos Eva, en el VsCode  editamos una linea
+en la terminal ponemos --git status y ahi nos saldra que se modifico 
+el index.html 
+luego ponemos  --git add index.html 
+y luego --$ git commit -m "Renombrando Curso de integracion continua"
+y luego 
+--git push servidorlocal master y con tdas estas lineas se envio al 
+servidor para que alex pudiese ver los cambios
+Salimos de la carpeta eva y entramos a la de alex 
+luego
+--git pull servidorlocal master 
+---------Recuerdo-------------
+--git log -p El comando git log nos muestra todo el historial 
+de cambios de un proyecto pero 
+-------------------------------
+
+
+Además de agregar repositorios remotos para sincronizar los datos, 
+vimos que git clone trae un repositorio remoto a nuestra computadora
+creando un repositorio local.
+
+Al modificar el código en nuestro repositorio local, 
+¿cómo enviamos las modificaciones a el repositorio remoto?
+
+------git push [repositorio] master-----------
+
+De esta forma enviamos las modificaciones de nuestra Branch master 
+(hablaremos más sobre branches dentro de poco) hacia el repositorio 
 remoto. Basta con substituir [repositorio] por el nombre que dimos 
 al repositorio al agregarlo. Ahora, para traer los datos que están 
 en el repositorio remoto, podemos utilizar git pull [repositorio] 
 master.
 
-------------------GITHUB-----------------------
-cOMO SUBIR UN REPOSITORIO A GITHUB 
-crear un repositorio en GitHub
-luego en nuestra terminal hacer un git initt, y todos los pasos 
-anteriores que hemos hecho, y agregaremos esto a la terminal
+SERVIDORES GRATUITOS GitHub nos permite crear repositorios git en 
+internet 
+Creamos un repositorio en github, al crearlo hasta abajo nos aparece
+si queremos creaar un nuevo repositorio desde git
+o en tal caso de que queramos subir un repositorio que ya tenemos 
+con push 
+Y nosotros vamos a hacer esto 
+--git remote add origin https://github.com/alexgnz-poisson/alura-git.git
+--git branch -M main
+--git push -u origin main --el u significa que cada vez que hagamos 
+un git push de nuestra brach master siempre ira a master 
 
---git remote add origin https://github.com/usuariogit/nombre_repositorio-git.git
-luego 
--- git push origin master 
-
-
---------Branches--------
-son las ramas de nuestro git
-para verlas usamos 
---git branch    nos saldra master por que es la unica creada en el momento
-luego para crear una nueva 
-git brach titulo,       Donde titulo es es nombre que le asignamos a la 
-nueva branch
-para entrar a la nueva branch es
---git checkout titutlo y eso nos metera a la nueva branh llamada titulo 
 
 ----------NOTA---------------
 Se hizo prueba en git, creando un archivo y editandolo, para esto 
@@ -226,4 +250,12 @@ la nueva branch que hicimos hacemos el siguiente comando
 --git checkout titulo, esto nos mandara la nueva branch llamada titulo
 
 NOTA LAS NOTAS BUENAS ESTAN EN TITULO AL PARECER EN EL BRACH 
-(ya se copiaron al master )
+
+Comando interesante para poder trabajar con los branch es
+---git checkout -b lista 
+
+vamos a ver como enviar datos de otras branch a la branch master 
+
+Las branches ("ramas") se utilizan para desarrollar funcionalidades 
+aisladas entre sí. La branch master es la branch "predeterminada" 
+cuando creas un repositorio.
