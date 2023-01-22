@@ -259,3 +259,18 @@ vamos a ver como enviar datos de otras branch a la branch master
 Las branches ("ramas") se utilizan para desarrollar funcionalidades 
 aisladas entre sí. La branch master es la branch "predeterminada" 
 cuando creas un repositorio.
+
+-git merge titulo, donde el titulo es el brench que estamos trayendo
+a la rama master. 
+
+¿Cómo podemos hacer el merge de la Branch titulo hacia la 
+Branch master?
+
+--git checkout master
+y
+
+--git merge titulo
+De esta forma colocaremos el HEAD en la Branch master, o sea, 
+haremos que nuestro código esté en el estado que lo dejamos con el 
+últimocommit en master. Después, uniremos el trabajo de la Branch 
+titulo con la Branch actual (master).
