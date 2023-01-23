@@ -368,3 +368,41 @@ queremos y luego la elimina del stash la informacion
 
 Para enviar las modifiaciones a nuestro servidor que creamos (remoto)
 --git push servidorlocal master 
+
+---------------CHECKOUT------------------------
+Resumidamente, ¿para qué sirve el comando git checkout?
+Para dejar nuestro código en un estado determinado.
+ La descripción del comando git checkout --help, en una traducción libre es: “Actualizar los archivos en working tree para que queden en la versión especificada. […]”.
+
+Básicamente, podemos dejar nuestro código en el estado de último 
+commit de una branch, de un commit específico, o incluso tags 
+(que veremos más adelante).
+
+------------MODIFICACIONES --------------------
+Con el comando git diff, vimos que es posible visualizar las modificaciones 
+realizadas en determinado código. Podemos ver las diferencias entre 
+commits, branches, etc.
+
+¿Cómo exhibe git diff las modificaciones en el código?
+
++ línea agregada
+- línea eliminada
+- línea modificada (versión antigua)
++ línea modificada (nueva versión)
+
+El símbolo de sustracción (-) antes de la línea indica que ella no 
+está más presente en el archivo. Ahora, el símbolo de adición (+) 
+muestra que es una línea nueva. Las modificaciones son 
+representadas por una eliminación y adición de línea.
+
+-----------TAGS EN GITHUB ---------------------------
+Vimos en el último video cómo generar versiones, o marcos interesantes en nuestro sistema de control de versiones.
+
+¿Qué resultado genera el envío de una tag para Github?
+
+Genera una Release, o sea, conseguiremos bajar un archivo compactado
+con nuestro código en este punto.
+Github nos da la posibilidad de bajar un archivo compactado que 
+contiene el código en el estado en que el tag fue generado.
+---------------------------------------------------
+Checar Tags en GITHUB 
