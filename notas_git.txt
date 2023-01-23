@@ -278,6 +278,47 @@ titulo con la Branch actual (master).
 ------------checar git merge y git rebase -----
 Ahora haremos sera actualizar los commits de master con los commits de 
 titulo . 
+luego usamos el --git rebase pero no entendi muy bien eso pero segun
+google te permite cambiar fácilmente una serie de confirmaciones, 
+modificando el historial de tu repositorio
+
+En este escenario, ¿cuál es la diferencia entre los comandos
+rebase y merge?
+
+El merge junta los trabajos y genera un merge commit. El rebase 
+aplica los commits de otra Branch en la Branch actual.
+Con esto evitamos los commits de merge. Hay una larga discusión 
+sobre lo que es “mejor”: rebase o merge; Estudie, busque, y 
+genere sus propias conclusiones
 
 un comando para salir del git rebase es
 --git rebase --abort 
+
+-----------CTRL + Z-------------
+Aqui confuguramos estando dentro de Eva/proyecto .
+usando
+--git config --local user.name "eva" y esto lo hicimos par ver el
+nombre de quyien lo editara en esta caso solo son 2 editores alex 
+y eva 
+
+Una manera de omitir lo que se borro y asi con comandos de git es
+-- git restore "nombre archcivo . con esto el cambio que hicimos 
+ya no estara. 
+
+Y por ejemplo si ya en nuestra terminal por ejemplo editamo una archivos
+hicimos el --git add y luego un git status para ver el estado.
+si no nostros ya tenemos cambios hecho y quisieramos volver para atras
+en el reposito hacemos lo siguiente 
+
+git restore --staged index.html(nombre archivo)
+
+Ahora veremos como dar un control +z a un commit que ya hicimos 
+
+--git log luego enter y este nos mostrara los hash de los commits
+que hemos hecho copiamos el que querramos borrar
+
+luego --git revert y pegamos el commit que copiamos anteriormente 
+
+y creara un nuevo commit deshaciendo el commit anterior y si estamos
+de acuerdo con el mensaje del nuevo commit vamos a apretar :X
+
