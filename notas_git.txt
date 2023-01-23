@@ -277,3 +277,6 @@ titulo con la Branch actual (master).
 
 Ahora haremos sera actualizar los commits de master con los commits de 
 titulo . 
+
+un comando para salir del git rebase es
+--git rebase --abort 
