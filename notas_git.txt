@@ -322,3 +322,33 @@ luego --git revert y pegamos el commit que copiamos anteriormente
 y creara un nuevo commit deshaciendo el commit anterior y si estamos
 de acuerdo con el mensaje del nuevo commit vamos a apretar :X
 
+luego git log y veremos lo siguiente el commit que revierte el commit
+
+¿Cuáles comandos, respectivamente, deshacen modificaciones antes de 
+agregarlas (1), después de agregarlas, pero antes de commitearlas 
+(2), y después de realizar el commit (3)?
+
+1 - git restore
+
+2 - git restore --staged
+
+3 - git revert
+
+Con el git restore deshacemos una modificación que aún no fue 
+agregada al index o stage, o sea, antes de hacer git add. Después 
+de agregar con git add, para deshacer una modificación, necesitamos 
+sacarlo de este estado, con git restore --staged. Ahora, si ya 
+hicimos el commit, el comando git revert puede salvarnos
+
+-----------guardando temporarmente-------------
+Vimos cómo podemos utilizar --git stash para almacenar temporalmente 
+algunas de nuestras modificaciones.
+
+¿En qué momento el stash es útil?
+Cuando necesitamos parar en el medio del desarrollo de algo, para 
+poder hacer otra cosa.
+Cuando necesitamos pausar el desarrollo de alguna funcionalidad, 
+o corrección, antes de finalizar, y tal vez no sea interesante 
+realizar un commit, pues nuestro código puede no estar funcionando 
+aún. En este caso es interesante guardar el trabajo para poder 
+volver a él después.
