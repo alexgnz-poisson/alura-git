@@ -352,3 +352,19 @@ o corrección, antes de finalizar, y tal vez no sea interesante
 realizar un commit, pues nuestro código puede no estar funcionando 
 aún. En este caso es interesante guardar el trabajo para poder 
 volver a él después.
+----------------------------------------------------
+Guardar algo pero no quiero commitear 
+--git stash , la guarda en un lugar temporal donde puedo recuperarla
+despues 
+Para usar esos datos de nuevo se debe de hacer lo siguiente . 
+una opcion
+--git stash list 
+--git stash apply 0 (0 por que es el primer que agregue )
+Con este metodo, seguiran los cambios en la lista de stash 
+
+Por eso en la segunda opcion agarramos lo del stash a la carpeta que
+queremos y luego la elimina del stash la informacion 
+--git stash pop 
+
+Para enviar las modifiaciones a nuestro servidor que creamos (remoto)
+--git push servidorlocal master 
