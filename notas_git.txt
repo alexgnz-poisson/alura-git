@@ -275,6 +275,7 @@ haremos que nuestro código esté en el estado que lo dejamos con el
 últimocommit en master. Después, uniremos el trabajo de la Branch 
 titulo con la Branch actual (master).
 
+------------checar git merge y git rebase -----
 Ahora haremos sera actualizar los commits de master con los commits de 
 titulo . 
 
